@@ -1,0 +1,11 @@
+node --version (version 18 o superior)
+npm install -g @angular/cli
+ng version
+
+ng new angular-18-app
+
+ng serve (iniciar)
+
+DEPENDENCIAS
+
+
