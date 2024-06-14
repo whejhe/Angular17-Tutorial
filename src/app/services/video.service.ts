@@ -16,12 +16,6 @@ export class VideoService {
 
   private videos: Video[] = [
     {
-      id: 'react-course1',
-      url: 'https://www.youtube.com/embed/7iobxzd_2wY?list=PLUofhDIg_38q4D0xNWp7FEHOTcZhjWJ29' || 'assets/images/fueraServicio.png',
-      title: 'Curso React desde cero 2024',
-      topics: ['React','Framework'],
-    },
-    {
       id: 'angular-course1',
       url: 'https://www.youtube.com/embed/f7unUpshmpA' || 'assets/images/fueraServicio.png',
       title: 'Curso ANGULAR 17 desde cero',
@@ -32,6 +26,18 @@ export class VideoService {
       url: 'https://www.youtube.com/embed/kLUdumt8lNY' || 'assets/images/fueraServicio.png',
       title: 'Estructura para proyectos Angular 17',
       topics: ['Angular'],
+    },
+    {
+      id: 'angular-17-defer',
+      url: 'https://www.youtube.com/embed/kugUaUxk5TU' || 'assets/images/fueraServicio.png',
+      title: 'Mejora la velocidad en Angular 17 con Defer',
+      topics: ['angular', 'defer'],
+    },
+    {
+      id: 'react-course1',
+      url: 'https://www.youtube.com/embed/7iobxzd_2wY?list=PLUofhDIg_38q4D0xNWp7FEHOTcZhjWJ29' || 'assets/images/fueraServicio.png',
+      title: 'Curso React desde cero 2024',
+      topics: ['React','Framework'],
     },
     {
       id: '',

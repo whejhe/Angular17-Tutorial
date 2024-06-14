@@ -1,0 +1,9 @@
+<!--List Card Component -->
+<div class="list-card">
+  <ul *ngFor="let item of list">
+    <li>
+      <a [href]="item.url" target="_blank"><h3>{{item.name}}</h3></a>
+    </li>
+    <p>{{item.description}}</p>
+  </ul>
+</div>

@@ -7,11 +7,18 @@
   </a>
 </div>
 
-<div *ngFor="let video of filteredVideos; let i = index" class="youtube-card-container">
-  <app-youtube-card
-  [videoId]="video.id"
-  [videoUrl]="video.url"
-  [title]="video.title"
-  [topics]="video.topics"
-  ></app-youtube-card>
-</div>
+@defer(on viewport){
+  <div *ngFor="let video of filteredVideos; let i = index" class="youtube-card-container">
+    <app-youtube-card
+    [videoId]="video.id"
+    [videoUrl]="video.url"
+    [title]="video.title"
+    [topics]="video.topics"
+    ></app-youtube-card>
+  </div>
+}@placeholder {
+  <p>Videos aqui...</p>
+}@loading (minimum 0.5s) {
+  <p>Cargando videos...</p>
+}
+
