@@ -1,0 +1,12 @@
+input{
+  border: 1px solid chocolate;
+  padding: 0.5em;
+  border-radius: 5px;
+  margin: 3em 0 0 2em;
+  width: 30%;
+  align-items: center;
+}
+::-webkit-input-placeholder{
+  color: whitesmoke;
+  opacity: 0.8;
+}

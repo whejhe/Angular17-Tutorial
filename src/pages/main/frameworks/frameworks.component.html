@@ -1,2 +1,13 @@
 <!-- Frameworks Component -->
-  <app-youtube-card [videoId]="'react-course1'"></app-youtube-card>
+<!-- <input type="text" [(ngModel)]="filterText" (input)="filterVideos()" placeholder="Filtrar videos por título o tema" /> -->
+<app-video-filter (filterChange)="onFilterChange($event)"></app-video-filter>
+
+<div *ngFor="let video of filteredVideos; let i = index" class="youtube-card-container">
+  <app-youtube-card
+  [videoId]="video.id"
+  [videoUrl]="video.url"
+  [title]="video.title"
+  [topics]="video.topics"
+  [ngClass]="{'youtube-card-left': i % 2 === 0, 'youtube-card-right': i % 2 !== 0}"
+  ></app-youtube-card>
+</div>

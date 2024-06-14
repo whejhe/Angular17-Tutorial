@@ -1,5 +1,5 @@
 //src/components/elements/youtube-card/youtube-card.component
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { VideoService } from '../../../services/video.service';
 import { SafeUrlPipe } from "../../../pipes/safe-url.pipe";
 
@@ -10,14 +10,13 @@ import { SafeUrlPipe } from "../../../pipes/safe-url.pipe";
     styleUrl: './youtube-card.component.css',
     imports: [SafeUrlPipe]
 })
-export class YoutubeCardComponent implements OnInit {
+export class YoutubeCardComponent {
 
-  @Input()videoId: string = '';
-  videoUrl: string = '';
+  @Input() videoId: string = '';
+  @Input() videoUrl: string = '';
+  @Input() title: string = '';
+  @Input() topics: string[] = [];
 
   constructor(private videoSvc: VideoService) { }
 
-  ngOnInit(): void {
-    this.videoUrl = this.videoSvc.getVideoUrl(this.videoId);
-  }
 }

@@ -4,6 +4,8 @@ import { YoutubeCardComponent } from "../../../components/elements/youtube-card/
 import { VideoService } from '../../../services/video.service';
 import { SafeUrlPipe } from '../../../pipes/safe-url.pipe';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { VideoFilterComponent } from '../../../components/elements/video-filter/video-filter.component';
 
 @Component({
     selector: 'app-frameworks',
@@ -13,18 +15,31 @@ import { CommonModule } from '@angular/common';
     imports: [
       YoutubeCardComponent,
       SafeUrlPipe,
-      CommonModule
+      CommonModule,
+      FormsModule,
+      VideoFilterComponent
     ]
 })
 export class FrameworksComponent {
+
+  videos = this.videoSvc.getVideos();
+  filteredVideos = this.videos;
+  filterText = '';
 
   constructor(
     private videoSvc: VideoService
   ) {}
 
-  // Añadir videos aqui
-  // getVideoUrl(id: string): string {
-  //   return this.videoSvc.getVideoUrl(id);
-  // }
+  onFilterChange(filterText: string) {
+    this.filterText = filterText;
+    this.filterVideos();
+  }
+
+  filterVideos() {
+    this.filteredVideos = this.videos.filter(video =>
+      video.title.toLowerCase().includes(this.filterText.toLowerCase()) ||
+      video.topics.some(topic => topic.toLowerCase().includes(this.filterText.toLowerCase()))
+    );
+  }
 
 }

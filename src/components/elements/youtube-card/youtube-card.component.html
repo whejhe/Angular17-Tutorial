@@ -1,9 +1,10 @@
 <!-- Youtube Card Component -->
 <div class="youtube-card">
-  <h2>Curso React desde cero</h2>
+  <h2>{{title}}</h2>
+  <!-- <p>{{topics.join(', ')}}</p> -->
   <iframe
     [src]="videoUrl | safeUrl"
-    title="CURSO REACT 2024 - Aprende desde cero"
+    title="Youtube Video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
