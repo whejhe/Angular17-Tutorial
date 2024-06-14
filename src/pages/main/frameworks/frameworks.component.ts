@@ -2,13 +2,19 @@
 import { Component } from '@angular/core';
 import { YoutubeCardComponent } from "../../../components/elements/youtube-card/youtube-card.component";
 import { VideoService } from '../../../services/video.service';
+import { SafeUrlPipe } from '../../../pipes/safe-url.pipe';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-frameworks',
     standalone: true,
     templateUrl: './frameworks.component.html',
     styleUrl: './frameworks.component.css',
-    imports: [YoutubeCardComponent]
+    imports: [
+      YoutubeCardComponent,
+      SafeUrlPipe,
+      CommonModule
+    ]
 })
 export class FrameworksComponent {
 
@@ -16,10 +22,9 @@ export class FrameworksComponent {
     private videoSvc: VideoService
   ) {}
 
-  selectedVideoUrl: string = '';
-
-  selectVideo(id:string):void{
-    this.selectedVideoUrl = this.videoSvc.getVideoUrl(id);
-  }
+  // Añadir videos aqui
+  // getVideoUrl(id: string): string {
+  //   return this.videoSvc.getVideoUrl(id);
+  // }
 
 }

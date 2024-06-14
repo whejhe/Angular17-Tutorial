@@ -1,0 +1,14 @@
+.youtube-card{
+  display: flex;
+  flex-wrap: wrap;
+  h2{
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+  }
+  iframe{
+    width: 720px;
+    height: 405px;
+    margin: 1em auto;
+  }
+}
