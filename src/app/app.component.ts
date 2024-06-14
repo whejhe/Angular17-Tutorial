@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { UserComponent } from "./user/user.component";
 import { NavComponent } from "../components/layouts/nav/nav.component";
 
 @Component({
@@ -10,7 +9,6 @@ import { NavComponent } from "../components/layouts/nav/nav.component";
     styleUrl: './app.component.css',
     imports: [
         RouterOutlet,
-        UserComponent,
         NavComponent
     ]
 })

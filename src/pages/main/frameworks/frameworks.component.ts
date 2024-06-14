@@ -6,6 +6,7 @@ import { SafeUrlPipe } from '../../../pipes/safe-url.pipe';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { VideoFilterComponent } from '../../../components/elements/video-filter/video-filter.component';
+import { IconService } from '../../../services/icon.service';
 
 @Component({
     selector: 'app-frameworks',
@@ -27,8 +28,11 @@ export class FrameworksComponent {
   filterText = '';
 
   constructor(
-    private videoSvc: VideoService
+    private videoSvc: VideoService,
+    private iconSvc: IconService
   ) {}
+
+  public icons = this.iconSvc.icons;
 
   onFilterChange(filterText: string) {
     this.filterText = filterText;
