@@ -1,0 +1,18 @@
+<h2>Guias de Desarrollo</h2>
+<div class="guia-filter">
+  <select name="" id="">
+    <option value="">All</option>
+    @for(guia of guias; track guia.id){
+      <option value="" >{{ guia.title }}</option>
+    }
+  </select>
+</div>
+
+<div class="guia-container">
+  <app-git-github></app-git-github>
+
+  <app-firebase></app-firebase>
+
+</div>
+
+

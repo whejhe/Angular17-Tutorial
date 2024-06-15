@@ -1,2 +1,9 @@
 <!-- Utils Component-->
+<div class="utils-filter">
+  <select>
+    <option value="">All topics</option>
+    <option *ngFor="let topic of topics" [value]="topic">{{ topic }}</option>
+  </select>
+</div>
+
 <app-list-card></app-list-card>

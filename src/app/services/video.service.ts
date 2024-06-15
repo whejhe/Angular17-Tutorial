@@ -40,10 +40,22 @@ export class VideoService {
       topics: ['React','Framework'],
     },
     {
+      id: 'Firestore',
+      url: 'https://www.youtube.com/embed/t_YSrxj0wGY?list=PLTg7E2ObeSjYfoEUh9YOgqXMWT51R1VVN' || 'assets/images/fueraServicio.png',
+      title: 'CRUD con Angular y Firebase (Firestore) paso a paso',
+      topics: ['Firebase', 'Angular', 'Firestore'],
+    },
+    {
       id: '',
       url: '' || 'assets/images/fueraServicio.png',
       title: '',
       topics: [],
+    },
+    {
+      id: 'course-git-github',
+      url: 'https://www.youtube.com/embed/niPExbK8lSw' || 'assets/images/fueraServicio.png',
+      title: 'Curso de GIT y GITHUB DESDE CERO',
+      topics: ['git', 'github'],
     }
 
   ]

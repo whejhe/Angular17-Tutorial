@@ -1,13 +1,13 @@
 //src/app/components/elements/list-card/list-card.component
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ListaService } from '../../../services/lista.service';
 
 @Component({
   selector: 'app-list-card',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
   ],
   templateUrl: './list-card.component.html',
   styleUrl: './list-card.component.css'

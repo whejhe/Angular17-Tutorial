@@ -1,0 +1,151 @@
+  <header>
+    <h1>Guía Completa - Integrar Firebase en Proyecto Angular 18</h1>
+  </header>
+
+  <nav>
+    <ul class="indice">
+      <li (click)="scrollTo('#intro')">Introducción</li>
+      <li (click)="scrollTo('#requisitos')">Requisitos Previos</li>
+      <li (click)="scrollTo('#proyecto')">Configuración del Proyecto Firebase</li>
+      <li (click)="scrollTo('#config')">Instalación y Configuración de Firebase en Angular 18</li>
+      <li (click)="scrollTo('#auth')">Autenticación</li>
+      <li (click)="scrollTo('#firestore')">Firestore</li>
+      <li (click)="scrollTo('#storage')">Storage</li>
+      <li (click)="scrollTo('#deploy')">Deploy a Firebase Hosting</li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <h2>Introducción</h2>
+      <p>Firebase es una plataforma de desarrollo de aplicaciones que ofrece varios servicios como autenticación, base de datos en tiempo real, Firestore, almacenamiento en la nube, y hosting. Integrar Firebase en un proyecto de Angular 18 permite aprovechar estas funcionalidades de manera sencilla y eficiente.</p>
+    </section>
+
+    <section id="requisitos">
+      <h2>Requisitos Previos</h2>
+      <ul>
+        <li>Node.js y npm instalados.</li>
+        <li>Angular CLI instalado (<code>{{installAngular}}</code>).</li>
+        <li>Cuenta en Firebase y acceso a la consola de Firebase.</li>
+      </ul>
+    </section>
+
+    <section id="proyecto">
+      <h2>Configuración del Proyecto Firebase</h2>
+      <ol>
+        <li>
+          <h3>Crear un Proyecto en Firebase:</h3>
+          <p>Ve a la <a href="https://console.firebase.google.com/" target="_blank">Consola de Firebase</a>. Haz clic en "Add project" y sigue las instrucciones.</p>
+        </li>
+        <li>
+          <h3>Configurar una Aplicación Web en Firebase:</h3>
+          <p>En la consola de Firebase, selecciona tu proyecto. En el panel izquierdo, selecciona "Authentication" y habilita los métodos de autenticación que necesitas. Selecciona "Firestore Database" y crea una base de datos. Selecciona "Storage" y configura tus reglas de almacenamiento. Selecciona "Hosting" y configura tu dominio.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="config">
+      <h2>Instalación y Configuración de Firebase en Angular 18</h2>
+      <ol>
+        <li>
+          <h3>Crear un Proyecto Angular:</h3>
+          <pre><code>ng new mi-proyecto-angular
+cd mi-proyecto-angular</code></pre>
+        </li>
+        <li>
+          <h3>Instalar Firebase y AngularFire:</h3>
+          <pre><code>{{installfirebase}}</code></pre>
+        </li>
+        <li>
+          <h3>Configurar Firebase en Angular:</h3>
+          <p>En la consola de Firebase, ve a "Configuración del proyecto" y copia la configuración de Firebase. Crea un archivo <code>src/environments/environment.ts</code> con el siguiente contenido:</p>
+          <pre><code>{{envirotment}}</code></pre>
+        </li>
+        <li>
+          <h3>Inicializar Firebase en el Módulo Principal:</h3>
+          <pre><code>{{iniciarFirebase}}</code></pre>
+        </li>
+      </ol>
+    </section>
+
+    <section id="auth">
+      <h2>Autenticación</h2>
+      <p>Para configurar la autenticación con Firebase:</p>
+      <ol>
+        <li>
+          <h3>Configurar Proveedor de Autenticación:</h3>
+          <p>En la consola de Firebase, habilita el proveedor de autenticación que necesitas (por ejemplo, Email/Password).</p>
+        </li>
+        <li>
+          <h3>Implementar Servicio de Autenticación en Angular:</h3>
+          <pre><code></code></pre>
+        </li>
+        <li>
+          <h3>Utilizar el Servicio de Autenticación en Componentes:</h3>
+          <pre><code>{{servicioDeAutenticacion}}</code></pre>
+        </li>
+      </ol>
+    </section>
+
+    <section id="firestore">
+      <h2>Firestore</h2>
+      <p>Para configurar Firestore en tu proyecto Angular:</p>
+      <ol>
+        <li>
+          <h3>Crear Servicio para Firestore:</h3>
+          <pre><code>{{servicioFirestore}}</code></pre>
+        </li>
+        <li>
+          <h3>Utilizar el Servicio de Firestore en Componentes:</h3>
+          <pre><code>{{firestoreEnComponente}}</code></pre>
+        </li>
+      </ol>
+    </section>
+
+    <section id="storage">
+      <h2>Storage</h2>
+      <p>Para configurar Firebase Storage en tu proyecto Angular:</p>
+      <ol>
+        <li>
+          <h3>Crear Servicio para Storage:</h3>
+          <pre><code>{{servicioStorage}}</code></pre>
+        </li>
+        <li>
+          <h3>Utilizar el Servicio de Storage en Componentes:</h3>
+          <pre><code>{{storageComponente}}</code></pre>
+        </li>
+      </ol>
+    </section>
+
+    <section id="deploy">
+      <h2>Deploy a Firebase Hosting</h2>
+      <ol>
+        <li>
+          <h3>Instalar Firebase CLI:</h3>
+          <pre><code>npm install -g firebase-tools</code></pre>
+        </li>
+        <li>
+          <h3>Iniciar Sesión en Firebase:</h3>
+          <pre><code>firebase login</code></pre>
+        </li>
+        <li>
+          <h3>Inicializar Firebase en tu Proyecto:</h3>
+          <pre><code>firebase init</code></pre>
+          <p>Selecciona "Hosting" y sigue las instrucciones.</p>
+        </li>
+        <li>
+          <h3>Construir el Proyecto Angular:</h3>
+          <pre><code>ng build --prod</code></pre>
+        </li>
+        <li>
+          <h3>Deploy a Firebase Hosting:</h3>
+          <pre><code>firebase deploy</code></pre>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Guía de Integración de Firebase con Angular 18</p>
+  </footer>
+
