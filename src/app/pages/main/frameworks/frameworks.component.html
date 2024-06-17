@@ -1,11 +1,21 @@
 <!-- Frameworks Component -->
-<app-video-filter (filterChange)="onFilterChange($event)"></app-video-filter>
 <div class="icons" *ngFor="let icon of icons">
   <a [href]="icon.url" target="_blank">
     <img [src]="icon.image" [alt]="icon.name">
     <!-- <img src="assets/icons/angular-icon.png" alt=""> -->
   </a>
+</div><br>
+<div class="filters">
+  <app-video-filter class="input" (filterChange)="onFilterChange($event)"></app-video-filter>
+
+<div class="videos-filter">
+  <select (change)="onSelect($event)">
+    <option value="">All topics</option>
+    <option *ngFor="let topic of topics" [value]="topic">{{ topic }}</option>
+  </select>
 </div>
+</div>
+
 
 @defer(on viewport){
   <div *ngFor="let video of filteredVideos; let i = index" class="youtube-card-container">

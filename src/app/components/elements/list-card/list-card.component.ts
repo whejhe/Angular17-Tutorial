@@ -18,6 +18,8 @@ export class ListCardComponent implements OnInit {
     private listaSvc:ListaService
   ) { }
 
+  @Input() items:any[] = [];
+
   list:any[] = [];
 
   ngOnInit(): void {

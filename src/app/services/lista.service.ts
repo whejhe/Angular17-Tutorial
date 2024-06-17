@@ -75,13 +75,13 @@ export class ListaService {
     },
     {
       name: 'Playwright',
-      topic: ['Herramientas, Testing'],
+      topic: ['Testing'],
       url: 'https://playwright.dev/',
       description: 'Playwright es una biblioteca de automatización de código abierto para pruebas de navegadores y web scraping desarrollada por Microsoft y lanzada el 31 de enero de 2020, que desde entonces se ha vuelto popular entre programadores y desarrolladores web'
     },
     {
       name: 'Chromatic',
-      topic: ['Herramientas, Testing'],
+      topic: ['Testing'],
       url: 'https://www.chromatic.com/',
       description: 'Chromatic es un complemento de Storybook para pruebas de regresión visual y revisión en la nube.'
     },

@@ -24,15 +24,31 @@ export class UtilsComponent implements OnInit {
     'Imagenes',
     'Herramientas',
     'Testing',
-    'Frameworks',
     'Trabajos Colaborativos'
   ];
   selectedTopic: string = '';
+  filteredItems:any[] = [];
 
   constructor(private listaService: ListaService) { }
 
   ngOnInit(): void {
     this.list = this.listaService.list;
+    this.filteredItems = this.list;
   }
+
+  onSelect(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.selectedTopic = selectElement.value;
+    this.filterItems();
+  }
+
+  filterItems() {
+    if (this.selectedTopic) {
+      this.filteredItems = this.list.filter(item => item.topic.includes(this.selectedTopic));
+    } else {
+      this.filteredItems = this.list; // Mostrar todos los elementos si no hay ningún tema seleccionado
+    }
+  }
+
 
 }

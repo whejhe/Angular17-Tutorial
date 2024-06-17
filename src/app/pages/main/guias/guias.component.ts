@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { GitGithubComponent } from "./git-github/git-github.component";
 import { FirebaseComponent } from "./firebase/firebase.component";
+import { GithubActionsComponent } from './github-actions/github-actions.component';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-guias',
@@ -8,25 +10,32 @@ import { FirebaseComponent } from "./firebase/firebase.component";
     templateUrl: './guias.component.html',
     styleUrl: './guias.component.css',
     imports: [
-        GitGithubComponent,
-        FirebaseComponent
+        FirebaseComponent,
+        GithubActionsComponent,
+        CommonModule
     ]
 })
 export class GuiasComponent {
 
-    constructor() { }
+  constructor(private router: Router) {}
 
-    guias = [
-      {
-        id: 1,
-        title: 'Git-Github',
-        component: GitGithubComponent
-      },
-      {
-        id: 2,
-        title: 'Firebase',
-        component: FirebaseComponent
-      }
-    ]
+  guias = [
+    {
+      ruta: 'github-actions',
+      component: GithubActionsComponent
+    },
+    {
+      ruta: 'firebase',
+      component: FirebaseComponent
+    }
+  ]
+
+  selectComponent: string | null = null;
+
+  onSelect(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.selectComponent = selectElement.value;
+  }
+
 
 }

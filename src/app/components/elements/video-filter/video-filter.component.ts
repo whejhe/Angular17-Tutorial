@@ -15,6 +15,18 @@ export class VideoFilterComponent {
   @Output() filterChange = new EventEmitter<string>();
   filterText = '';
 
+  topic = [
+    'Angular',
+    'React',
+    'Vue',
+    'JavaScript',
+    'TypeScript',
+    'HTML',
+    'CSS',
+    'SASS',
+    'Bootstrap',
+  ]
+
   onFilterChange() {
     this.filterChange.emit(this.filterText);
   }

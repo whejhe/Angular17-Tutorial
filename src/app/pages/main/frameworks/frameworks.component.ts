@@ -1,5 +1,5 @@
 //src/pages/main/frameworks/frameworks.component
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { YoutubeCardComponent } from "../../../components/elements/youtube-card/youtube-card.component";
 import { VideoService } from '../../../services/video.service';
 import { SafeUrlPipe } from '../../../pipes/safe-url.pipe';
@@ -21,11 +21,25 @@ import { IconService } from '../../../services/icon.service';
       VideoFilterComponent
     ]
 })
-export class FrameworksComponent {
+export class FrameworksComponent implements OnInit {
+
+  list: any[] = [];
+  topics = [
+    'Angular',
+    'React',
+    'Vue',
+    'Svelte',
+    'Firebase',
+    'Git',
+    'GitHub',
+  ];
 
   videos = this.videoSvc.getVideos();
   filteredVideos = this.videos;
   filterText = '';
+
+  selectedTopic: string = '';
+  filteredItems:any[] = [];
 
   constructor(
     private videoSvc: VideoService,
@@ -44,6 +58,25 @@ export class FrameworksComponent {
       video.title.toLowerCase().includes(this.filterText.toLowerCase()) ||
       video.topics.some(topic => topic.toLowerCase().includes(this.filterText.toLowerCase()))
     );
+  }
+
+  ngOnInit(): void {
+    this.list = this.videoSvc.videos;
+    this.filteredItems = this.list;
+  }
+
+  onSelect(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.selectedTopic = selectElement.value;
+    this.filterItems();
+  }
+
+  filterItems() {
+    if (this.selectedTopic) {
+      this.filteredItems = this.list.filter(item => item.topic.includes(this.selectedTopic));
+    } else {
+      this.filteredItems = this.list; // Mostrar todos los elementos si no hay ningún tema seleccionado
+    }
   }
 
 }

@@ -14,7 +14,7 @@ interface Video{
 })
 export class VideoService {
 
-  private videos: Video[] = [
+  videos: Video[] = [
     {
       id: 'angular-course1',
       url: 'https://www.youtube.com/embed/f7unUpshmpA' || 'assets/images/fueraServicio.png',

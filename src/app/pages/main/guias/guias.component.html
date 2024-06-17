@@ -1,18 +1,14 @@
 <h2>Guias de Desarrollo</h2>
 <div class="guia-filter">
-  <select name="" id="">
-    <option value="">All</option>
-    @for(guia of guias; track guia.id){
-      <option value="" >{{ guia.title }}</option>
-    }
+  <select (change)="onSelect($event)">
+    <option value="">Select a guia</option>
+    <option *ngFor="let guia of guias" [value]="guia?.ruta || ''">
+      {{ guia?.ruta || '' }}
+    </option>
   </select>
 </div>
 
-<div class="guia-container">
-  <app-git-github></app-git-github>
-
-  <app-firebase></app-firebase>
-
+<div class="container-components">
+  <app-firebase *ngIf="selectComponent === 'firebase'"></app-firebase>
+  <app-github-actions *ngIf="selectComponent === 'github-actions'"></app-github-actions>
 </div>
-
-
