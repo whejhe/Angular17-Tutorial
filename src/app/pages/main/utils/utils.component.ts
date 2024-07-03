@@ -18,6 +18,9 @@ export class UtilsComponent implements OnInit {
 
   list: any[] = [];
   topics: string[] = [
+    'Animaciones',
+    'Api',
+    'Iconos',
     'Diseño',
     'Tipografia',
     'Colores',

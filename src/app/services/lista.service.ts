@@ -68,6 +68,18 @@ export class ListaService {
     },
     // HERRAMIENTAS
     {
+      name: 'Retool',
+      topic: ['Herramientas'],
+      url: 'https://retool.com/',
+      description: 'Retool es una aplicación de administración de código abierto para crear e interactuar con código de JavaScript, CSS y HTML.'
+    },
+    {
+      name: 'CodePen',
+      topic: ['Herramientas'],
+      url: 'https://codepen.io/',
+      description: 'CodePen es un editor web de código HTML, CSS y JavaScript que le permite probar el código directamente en el navegador.'
+    },
+    {
       name: 'Scroll Driven Animations',
       topic: ['Herramientas'],
       url: 'https://scroll-driven-animations.style/',
@@ -78,6 +90,18 @@ export class ListaService {
       topic: ['Testing'],
       url: 'https://playwright.dev/',
       description: 'Playwright es una biblioteca de automatización de código abierto para pruebas de navegadores y web scraping desarrollada por Microsoft y lanzada el 31 de enero de 2020, que desde entonces se ha vuelto popular entre programadores y desarrolladores web'
+    },
+    {
+      name: 'DevOps Banner',
+      topic: ['Herramientas'],
+      url: 'https://devops.datenkollektiv.de/banner.txt/index.html',
+      description: 'Generador de banner para Spring Boot.'
+    },
+    {
+      name: 'Postman',
+      topic: ['Testing', 'Herramientas'],
+      url: 'https://www.postman.com/',
+      description: 'Postman es un conjunto de herramientas para pruebas de APIs, web, y APIs. Crea, edita, y administra APIs de forma sencilla.'
     },
     {
       name: 'Chromatic',
@@ -149,10 +173,22 @@ export class ListaService {
     },
     // IMAGENES
     {
+      name: '',
+      topic: ['Imagenes'],
+      url: '',
+      description: ''
+    },
+    {
       name: 'Pexels',
       topic: ['Imagenes'],
       url: 'https://www.pexels.com/es-es/',
       description: 'Se trata de una plataforma social en la que los propios fotógrafos suben sus fotos seleccionadas.'
+    },
+    {
+      name: 'Imgto',
+      topic: ['Imagenes'],
+      url: 'https://imgto.xyz/',
+      description: 'Herramiento online para convertir y redimensionar tus imágenes.'
     },
     {
       name: 'Pikwizard',
@@ -203,6 +239,39 @@ export class ListaService {
       url: '',
       description: ''
     },
+    // API
+    {
+      name: 'Public APIs',
+      topic: ['Api'],
+      url: 'https://publicapis.dev/',
+      description: 'Página que proporciona un listado de apis publicas para uso libre.'
+    },
+    // ANIMACIONES
+    {
+      name: 'CSS Loaders',
+      topic: ['Animaciones'],
+      url: 'https://css-loaders.com/',
+      description: 'Recopilador de animaciones CSS.'
+    },
+    {
+      name: '',
+      topic: ['Animaciones'],
+      url: '',
+      description: ''
+    },
+    // ICONOS
+    {
+      name: 'Iconify',
+      topic: ['Iconos'],
+      url: 'https://iconify.design/',
+      description: 'Iconify es una biblioteca de iconos. Con Iconify, puedes crear tus propios iconos de forma sencilla y de forma eficiente.'
+    },
+    {
+      name: 'SVG Repo',
+      topic: ['Iconos'],
+      url: 'https://www.svgrepo.com/',
+      description: 'Coleccion de iconos SVG. Con SVG Repo, puedes crear tus propios iconos de forma sencilla y de forma eficiente.'
+    }
   ]
 
 }

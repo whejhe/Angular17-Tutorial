@@ -1,8 +1,11 @@
 <!-- Utils Component-->
+<h2>Utilidades</h2>
 <div class="utils-filter">
   <select (change)="onSelect($event)">
     <option value="">All topics</option>
-    <option *ngFor="let topic of topics" [value]="topic">{{ topic }}</option>
+    <option *ngFor="let topic of topics" [value]="topic">
+      {{ topic }}
+    </option>
   </select>
 </div>
 

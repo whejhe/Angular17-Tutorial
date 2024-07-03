@@ -1,14 +1,11 @@
 <h2>Guias de Desarrollo</h2>
 <div class="guia-filter">
   <select (change)="onSelect($event)">
-    <option value="">Select a guia</option>
-    <option *ngFor="let guia of guias" [value]="guia?.ruta || ''">
-      {{ guia?.ruta || '' }}
+    <option value="">All topics</option>
+    <option *ngFor="let topic of topics" [value]="topic">
+      {{ topic }}
     </option>
   </select>
 </div>
 
-<div class="container-components">
-  <app-firebase *ngIf="selectComponent === 'firebase'"></app-firebase>
-  <app-github-actions *ngIf="selectComponent === 'github-actions'"></app-github-actions>
-</div>
+<app-list-guias [items]="filteredItems"></app-list-guias>

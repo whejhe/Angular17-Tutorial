@@ -1,0 +1,24 @@
+.list-guias{
+    width: 80%;
+    margin: 0 auto 2em auto;
+  }
+  
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+    li{
+      /* background-color: aliceblue; */
+      width: fit-content;
+      margin-bottom: -1em;
+    }
+    li a{
+      text-decoration: none;
+      width: fit-content;
+      &:hover{
+        outline: 2px solid chocolate;
+      }
+    }
+  }
+  

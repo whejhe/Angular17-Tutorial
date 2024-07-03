@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
-import { FirebaseComponent } from "./firebase/firebase.component";
-import { GithubActionsComponent } from './github-actions/github-actions.component';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { ListGuiasComponent } from "../../../components/elements/list-guias/list-guias.component";
+import { GuiaServiceService } from '../../../services/guia.service';
 
 @Component({
     selector: 'app-guias',
@@ -10,31 +9,42 @@ import { Router } from '@angular/router';
     templateUrl: './guias.component.html',
     styleUrl: './guias.component.css',
     imports: [
-        FirebaseComponent,
-        GithubActionsComponent,
-        CommonModule
+        CommonModule,
+        ListGuiasComponent
     ]
 })
-export class GuiasComponent {
+export class GuiasComponent implements OnInit {
 
-  constructor(private router: Router) {}
+  
+  list: any[] = []
+  topics: string[] = [
+    "angular",
+    "vue",
+    "ionic",
+    "framework"
+  ];
+  selectedTopic: string = '';
+  filteredItems:any[] = [];
+  
+  constructor(private guiaSvc: GuiaServiceService) {}
 
-  guias = [
-    {
-      ruta: 'github-actions',
-      component: GithubActionsComponent
-    },
-    {
-      ruta: 'firebase',
-      component: FirebaseComponent
-    }
-  ]
-
-  selectComponent: string | null = null;
+  ngOnInit(): void {
+    this.list = this.guiaSvc.list;
+    this.filteredItems = this.list;  
+  }
 
   onSelect(event: Event) {
     const selectElement = event.target as HTMLSelectElement;
-    this.selectComponent = selectElement.value;
+    this.selectedTopic = selectElement.value;
+    this.filterItems()
+  }
+
+  filterItems() {
+    if (this.selectedTopic) {
+      this.filteredItems = this.list.filter(item => item.topic.includes(this.selectedTopic));
+    } else {
+      this.filteredItems = this.list; // Mostrar todos los elementos si no hay ningún tema seleccionado
+    }
   }
 
 
