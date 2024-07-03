@@ -371,7 +371,7 @@ export class ListaService {
       description: 'Recharts es una biblioteca de JavaScript para crear visualizaciones interactivas de datos. Con Recharts, puedes crear tus propios graficos de forma sencilla y de forma eficiente.'
     },
     {
-      name: '',
+      name: 'Excalidraw',
       topic: ['Graficos'],
       url: 'https://excalidraw.com/',
       description: 'Excalidraw es una biblioteca de JavaScript para crear visualizaciones interactivas de datos. Con Excalidraw, puedes crear tus propios graficos de forma sencilla y de forma eficiente.'
