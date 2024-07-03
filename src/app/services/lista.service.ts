@@ -68,6 +68,24 @@ export class ListaService {
     },
     // HERRAMIENTAS
     {
+      name: 'Figma',
+      topic: ['Herramientas'],
+      url: 'https://www.figma.com/',
+      description: 'Figma es un editor de gráficos vectorial y una herramienta de generación de prototipos, principalmente basada en la web, con características off-line adicionales habilitadas por aplicaciones de escritorio en macOS y Windows'
+    },
+    {
+      name: 'Warp Terminal',
+      topic: ['Herramientas'],
+      url: 'https://www.warp.dev/',
+      description: 'Warp es un emulador de terminal propietario escrito en Rust disponible para macOS y Linux. Las características notables incluyen Warp Drive para compartir comandos entre equipos, Warp AI para sugerencias y asistencia de comandos, y un IDE con selección de texto y posicionamiento del cursor.'
+    },
+    {
+      name: '123Apps',
+      topic: ['Herramientas'],
+      url: 'https://123apps.com/',
+      description: 'Conjunto de herramientas para Editar, convertir y crear videos, audios, imagenes y mas.'
+    },
+    {
       name: 'Retool',
       topic: ['Herramientas'],
       url: 'https://retool.com/',
@@ -271,6 +289,43 @@ export class ListaService {
       topic: ['Iconos'],
       url: 'https://www.svgrepo.com/',
       description: 'Coleccion de iconos SVG. Con SVG Repo, puedes crear tus propios iconos de forma sencilla y de forma eficiente.'
+    },
+    // IA
+    {
+      name: 'Codeium',
+      topic: ['IA'],
+      url: 'https://codeium.com/',
+      description: ' Herramienta de inteligencia artificial que agiliza y simplifica la programación al automatizar tareas mundanas, acelerar el desarrollo y aumentar la precisión.'
+    },
+    {
+      name: 'SpellBox',
+      topic: ['IA'],
+      url: 'https://spellbox.app/',
+      description: 'Asistente de programación AI que utiliza la inteligencia artificial para generar código a partir de simples indicaciones. '
+    },
+    {
+      name: 'Tabnine',
+      topic: ['IA'],
+      url: 'https://www.tabnine.com/',
+      description: 'Tabnine es un asistente de inteligencia artificial para desarrolladores de software que ayuda a escribir código más rápido directamente en tu editor favorito.'
+    },
+    {
+      name: 'AskCodi',
+      topic: ['IA'],
+      url: 'https://www.askcodi.com/',
+      description: 'AskCodi es una herramienta valiosa para los desarrolladores de software, ya que proporciona respuestas rápidas y confiables a sus preguntas de programación'
+    },
+    {
+      name: 'Devin AI',
+      topic: ['IA'],
+      url: 'https://www.devin.fm/',
+      description: 'Devin AI es una herramienta auxiliar de inteligencia artificial autónoma creada por Cognition Labs.'
+    },
+    {
+      name: 'Galileo AI',
+      topic: ['IA'],
+      url: 'https://www.usegalileo.ai/explore',
+      description: 'Galileo AI es una aplicación revolucionaria que acelera el proceso de diseño de UI mediante el uso de inteligencia artificial.'
     }
   ]
 

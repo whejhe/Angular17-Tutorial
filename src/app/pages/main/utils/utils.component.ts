@@ -21,6 +21,7 @@ export class UtilsComponent implements OnInit {
     'Animaciones',
     'Api',
     'Iconos',
+    'IA',
     'Diseño',
     'Tipografia',
     'Colores',
