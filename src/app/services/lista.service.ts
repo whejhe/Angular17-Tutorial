@@ -68,6 +68,12 @@ export class ListaService {
     },
     // HERRAMIENTAS
     {
+      name: 'QrCode Monkey',
+      topic: ['Herramientas'],
+      url: 'https://www.qrcode-monkey.com/es/#url',
+      description: 'Generador de Código QR'
+    },
+    {
       name: 'Figma',
       topic: ['Herramientas'],
       url: 'https://www.figma.com/',
@@ -75,7 +81,7 @@ export class ListaService {
     },
     {
       name: 'Warp Terminal',
-      topic: ['Herramientas'],
+      topic: ['Herramientas','IA'],
       url: 'https://www.warp.dev/',
       description: 'Warp es un emulador de terminal propietario escrito en Rust disponible para macOS y Linux. Las características notables incluyen Warp Drive para compartir comandos entre equipos, Warp AI para sugerencias y asistencia de comandos, y un IDE con selección de texto y posicionamiento del cursor.'
     },
@@ -191,10 +197,16 @@ export class ListaService {
     },
     // IMAGENES
     {
-      name: '',
+      name: 'Undraw.co',
       topic: ['Imagenes'],
-      url: '',
-      description: ''
+      url: 'https://undraw.co/illustrations',
+      description: 'Conjunto de ilustraciones para web.'
+    },
+    {
+      name: 'TopTal',
+      topic: ['Imagenes'],
+      url: 'https://www.toptal.com/designers/subtlepatterns/',
+      description: 'Ofrece un conjunto de patrones de imagen para fondos'
     },
     {
       name: 'Pexels',
@@ -290,6 +302,12 @@ export class ListaService {
       url: 'https://www.svgrepo.com/',
       description: 'Coleccion de iconos SVG. Con SVG Repo, puedes crear tus propios iconos de forma sencilla y de forma eficiente.'
     },
+    {
+      name: 'Font Awesome',
+      topic: ['Iconos'],
+      url: 'https://fontawesome.com/v5/search',
+      description: 'Ofrece una manera facil y rapida de añadir iconos a nuestros sitios web.'
+    },
     // IA
     {
       name: 'Codeium',
@@ -326,6 +344,37 @@ export class ListaService {
       topic: ['IA'],
       url: 'https://www.usegalileo.ai/explore',
       description: 'Galileo AI es una aplicación revolucionaria que acelera el proceso de diseño de UI mediante el uso de inteligencia artificial.'
+    },
+    {
+      name: 'Codestral AI',
+      topic: ['IA'],
+      url: 'https://chat.mistral.ai/chat',
+      description: 'Chat en tiempo real para mejorar la programación. Con Codestral AI, puedes crear código de forma sencilla y de forma eficiente.'
+    },
+    // GRAFICOS
+    {
+      name: 'D3.js',
+      topic: ['Graficos'],
+      url: 'https://d3js.org/',
+      description: 'D3.js es una biblioteca de JavaScript para crear visualizaciones interactivas de datos. Con D3.js, puedes crear tus propios graficos de forma sencilla y de forma eficiente.'
+    },
+    {
+      name: 'Plotly',
+      topic: ['Graficos'],
+      url: 'https://plotly.com/',
+      description: 'Plotly es una biblioteca de visualización de datos en Python que permite crear gráficos interactivos y personalizados para explorar y representar datos de manera efectiva.'
+    },
+    {
+      name: 'Recharts',
+      topic: ['Graficos'],
+      url: 'https://recharts.org/',
+      description: 'Recharts es una biblioteca de JavaScript para crear visualizaciones interactivas de datos. Con Recharts, puedes crear tus propios graficos de forma sencilla y de forma eficiente.'
+    },
+    {
+      name: '',
+      topic: ['Graficos'],
+      url: 'https://excalidraw.com/',
+      description: 'Excalidraw es una biblioteca de JavaScript para crear visualizaciones interactivas de datos. Con Excalidraw, puedes crear tus propios graficos de forma sencilla y de forma eficiente.'
     }
   ]
 

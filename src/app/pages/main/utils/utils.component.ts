@@ -26,6 +26,7 @@ export class UtilsComponent implements OnInit {
     'Tipografia',
     'Colores',
     'Imagenes',
+    'Graficos',
     'Herramientas',
     'Testing',
     'Trabajos Colaborativos'
